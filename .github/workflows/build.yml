@@ -1,0 +1,24 @@
+name: Build Mod
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Java o'rnatish
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Gradle build
+        run: ./gradlew build
+
+      - name: JAR yuklash
+        uses: actions/upload-artifact@v4
+        with:
+          name: SecondChance
+          path: build/libs/*.jar
