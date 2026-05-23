@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "secondchance",
+  "version": "${version}",
+  "name": "SecondChance",
+  "description": "Get a second chance when you die! 10 revives with 5 minute cooldown.",
+  "authors": [
+    "Shohruh-1010"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Shohruh-1010/SecondChance",
+    "sources": "https://github.com/Shohruh-1010/SecondChance"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.secondchance.SecondChanceMod"
+    ]
+  },
+  "mixins": [
+    "secondchance.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "minecraft": "1.21.1",
+    "java": ">=21"
+  }
+}
